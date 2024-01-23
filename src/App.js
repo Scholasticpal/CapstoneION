@@ -7,7 +7,7 @@ function App() {
   const [marketPrice, setMarketPrice] = useState('');
 
   const handleDownload = () => {
-    const data = `ContractId MarketPrice\n${String(marketPrice)} ${String(contractID)}`;
+    const data = `ContractId MarketPrice\n${String(contractID)} ${String(marketPrice)}`;
     const blob = new Blob([data], { type: 'text/plain' });
     const link = document.createElement('a');
     link.href = window.URL.createObjectURL(blob);
